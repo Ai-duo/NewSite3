@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.example.newsite",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 145,
+      "versionName": "1.5",
+      "enabled": true,
+      "outputFile": "NewSite_v1.5.apk"
+    }
+  ]
+}

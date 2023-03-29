@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="weaInfo"
+            type="java.lang.String" />
+        <variable
+            name="timer"
+            type="java.util.Timer" />
+        <variable
+            name="textSize"
+            type="java.lang.Integer" />
+        <variable
+            name="elements"
+            type="com.example.newsite.add.Elements" />
+        <variable
+            name="typeFace"
+            type="android.graphics.Typeface" />
+        <variable
+            name="siteInfo"
+            type="com.example.newsite.add.SiteInfo" />
+        <variable
+            name="pmFragment"
+            type="com.example.newsite.fragments.PMFragment" />
+        <variable
+            name="eLementFragemnt"
+            type="com.example.newsite.fragments.ElementFragment" />
+        <variable
+            name="mainActivity"
+            type="com.example.newsite.activity.MainActivity" />
+    </data>
+    <!--洞头-->
+    <LinearLayout
+        android:id="@+id/maincontainer"
+        android:layout_width="624px"
+        android:layout_height="104px"
+        android:background="#000"
+        android:orientation="horizontal"
+        android:screenOrientation="portrait"
+        tools:context=".activity.MainActivity">
+        <!--标题-->
+        <TextView
+
+            android:text="@{elements.getYear}"
+            app:setExtraTextSize="@{textSize}"
+            app:setExtraTypeface="@{typeFace}"
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:lineSpacingExtra="1px"
+            android:textColor="#f00"
+            />
+
+        <LinearLayout
+            android:id="@+id/content_fragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            app:context="@{mainActivity}"
+            app:timer="@{timer}"
+            app:elementFragment="@{eLementFragemnt}"
+            app:pmFragment="@{pmFragment}"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+        <TextView
+            android:text="@{elements.getElementNjd}"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lineSpacingExtra="12px"
+            android:textColor="#f00"
+            android:textSize="18px" />
+    </LinearLayout>
+</layout>

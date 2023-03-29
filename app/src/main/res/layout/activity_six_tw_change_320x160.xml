@@ -1,0 +1,46 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/maincontainer"
+    android:layout_width="320px"
+    android:layout_height="160px"
+    android:background="#000"
+    android:screenOrientation="portrait"
+    android:orientation="vertical">
+    <!--标题-->
+    <TextView
+        android:textColor="#f00"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lineSpacingExtra="1px"
+        android:textSize="23px" />
+
+    <LinearLayout
+
+        android:id="@+id/content_fragment"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="0dp">
+
+
+    </LinearLayout>
+    <com.example.newsite.add.MarqueeView
+        android:gravity="center"
+        android:id="@+id/weatherinfo"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:marqueeview_repet_type="repet_interval"
+        app:marqueeview_text_distance ="100"
+        app:marqueeview_text_size="12"
+        app:marqueeview_text_color="#f00"
+        app:marqueeview_text_speed="0.3"
+        />
+</LinearLayout>
