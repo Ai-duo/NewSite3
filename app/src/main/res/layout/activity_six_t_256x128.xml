@@ -35,8 +35,8 @@
     <!--洞头-->
     <LinearLayout
         android:id="@+id/maincontainer"
-        android:layout_width="256px"
-        android:layout_height="128px"
+        android:layout_width="208px"
+        android:layout_height="104px"
         android:background="#000"
         android:orientation="vertical"
         android:screenOrientation="portrait"
@@ -72,6 +72,7 @@
         </LinearLayout>
 
         <com.example.newsite.add.MarqueeView
+            android:visibility="gone"
             android:id="@+id/weatherinfo"
             android:layout_width="match_parent"
             android:layout_height="0dp"
