@@ -140,7 +140,7 @@ public class Elements {
                 +"最低温度："+min_wd+"℃\n";
     }
     public String getElementRightText() {
-        return "<font color=\"#FFFF00\">湿度:</font><font color=\"#00FF00\">"+sd+"</font><font color=\"#FFFF00\">%<br></font>   "
+        return "<font color=\"#FFFF00\">湿度:</font><font color=\"#00FF00\">"+sd+"</font><font color=\"#FFFF00\">%RH<br></font>   "
                 +"<font color=\"#FFFF00\">风向:</font><font color=\"#00FF00\">"+fx+"</font><font color=\"#FFFF00\"><br></font>"
                 +"<font color=\"#FFFF00\">气压:</font><font color=\"#00FF00\">"+qy+"</font><font color=\"#FFFF00\">hPa<br></font>";
 

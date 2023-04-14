@@ -67,7 +67,7 @@ public class ElementsService extends Service {
         weaTimer();
         bindCardSystemUartAidl();
         startGetUart();
-        final String in = "DMGD WX001 2021-03-17 16:45 1111111111111011111111111111110000000000000000000000000000000000001110000000000000000000000000000001100000000000000000000001000000000000000 00000000000000000080000000000000000 98 53 102 48 100 59 1605 98 54 101 95 1606 0 218 227 1601 218 1645 * 72 69 1601 188 165 10108 10108 1617 10106 1601 10126 0 00 98 71 000000000000000000000000000000000000000000000 *5B *33 T";
+       /* final String in = "DMGD WX001 2021-03-17 16:45 1111111111111011111111111111110000000000000000000000000000000000001110000000000000000000000000000001100000000000000000000001000000000000000 00000000000000000080000000000000000 98 53 102 48 100 59 1605 98 54 101 95 1606 0 218 227 1601 218 1645 * 72 69 1601 188 165 10108 10108 1617 10106 1601 10126 0 00 98 71 000000000000000000000000000000000000000000000 *5B *33 T";
         Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
@@ -75,7 +75,7 @@ public class ElementsService extends Service {
             public void run() {
                 getElements(in);
             }
-        }, 0, 10000);
+        }, 0, 10000);*/
       /*  new Thread(new Runnable() {
             @Override
             public void run() {
@@ -319,7 +319,7 @@ public class ElementsService extends Service {
     //能见度
     String njd = "--";//26
     static String WEA;
-    String port = "/dev/ttyS3";//,/dev/ttysWK2   /dev/ttyMT3
+    String port = "/dev/ttyS4";//,/dev/ttysWK2   /dev/ttyMT3
     //判断是否重启,每十分钟判断一次sendCount与currentCount的值，如果两者相等就重起；
     int sendCount = 0, currentCount = -1;
 
