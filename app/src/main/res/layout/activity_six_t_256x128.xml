@@ -57,15 +57,13 @@
             />
 
         <LinearLayout
+            android:background="#fff"
             android:id="@+id/content_fragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3"
             android:gravity="center"
-            app:context="@{mainActivity}"
-            app:timer="@{timer}"
-            app:elementFragment="@{eLementFragemnt}"
-            app:pmFragment="@{pmFragment}"
+
             android:orientation="horizontal">
 
 

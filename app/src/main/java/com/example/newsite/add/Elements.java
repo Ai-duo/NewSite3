@@ -140,16 +140,16 @@ public class Elements {
                 +"最低温度："+min_wd+"℃\n";
     }
     public String getElementRightText() {
-        return "<font color=\"#FFFF00\">湿度:</font><font color=\"#00FF00\">"+sd+"</font><font color=\"#FFFF00\">%RH<br></font>   "
-                +"<font color=\"#FFFF00\">风向:</font><font color=\"#00FF00\">"+fx+"</font><font color=\"#FFFF00\"><br></font>"
-                +"<font color=\"#FFFF00\">气压:</font><font color=\"#00FF00\">"+qy+"</font><font color=\"#FFFF00\">hPa<br></font>";
+        return "<font color=\"#FFFF00\">湿度:</font><font color=\"#FFFFFF\">"+sd+"</font><font color=\"#FFFFFF\">%RH<br></font>   "
+                +"<font color=\"#FFFF00\">风向:</font><font color=\"#FFFFFF\">"+fx+"</font><font color=\"#FFFFFF\"><br></font>"
+                +"<font color=\"#FFFF00\">气压:</font><font color=\"#FFFFFF\">"+qy+"</font><font color=\"#FFFFFF\">hPa<br></font>";
 
     }
     public String getElementLeftText() {
 
-        return "<font color=\"#FFFF00\">温度:</font><font color=\"#00FF00\">"+wd+"</font><font color=\"#FFFF00\">℃<br></font>"
-                +"<font color=\"#FFFF00\">风速:</font><font color=\"#00FF00\">"+fs+"</font><font color=\"#FFFF00\">m/s<br></font>"
-                +"<font color=\"#FFFF00\">雨量:</font><font color=\"#00FF00\">"+js+"</font><font color=\"#FFFF00\">mm<br></font>";
+        return "<font color=\"#FFFF00\">温度:</font><font color=\"#FFFFFF\">"+wd+"</font><font color=\"#FFFFFF\">℃<br></font>"
+                +"<font color=\"#FFFF00\">风速:</font><font color=\"#FFFFFF\">"+fs+"</font><font color=\"#FFFFFF\">m/s<br></font>"
+                +"<font color=\"#FFFF00\">雨量:</font><font color=\"#FFFFFF\">"+js+"</font><font color=\"#FFFFFF\">mm<br></font>";
 
     }
     public String getFourElementRightText() {

@@ -27,7 +27,7 @@ public class ElementFragment extends Fragment {
     ElementFragmentBinding inflate;
     int size;
     Typeface typeface;
-
+    TextView lv,rv;
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -43,19 +43,23 @@ public class ElementFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.i("TAG_", "ElementFragment_onCreateView");
-        inflate = DataBindingUtil.inflate(inflater, R.layout.element_fragment, container, false);
-        if (size > 0) {
-            inflate.setVariable(BR.textSize, size);
+        if(inflate==null) {
+            inflate = DataBindingUtil.inflate(inflater, R.layout.element_fragment, container, false);
+            if (size > 0) {
+                inflate.setVariable(BR.textSize, size);
+            }
+            if (typeface != null) {
+                inflate.setVariable(BR.typeFace, typeface);
+            }
+            inflate.setVariable(BR.orientation, SiteSets.getSiteTextSet().orientation);
+            lv = inflate.leftText;
+            rv = inflate.rightText;
         }
-        if (typeface != null) {
-            inflate.setVariable(BR.typeFace, typeface);
-        }
-        inflate.setVariable(BR.orientation, SiteSets.getSiteTextSet().orientation);
         if (!TextUtils.isEmpty(left)) {
-            inflate.rightText.setText(Html.fromHtml(left));
+            rv.setText(Html.fromHtml(left));
         }
         if (!TextUtils.isEmpty(right)) {
-            inflate.leftText.setText(Html.fromHtml(right));
+            lv.setText(Html.fromHtml(right));
         }
         return inflate.getRoot();
     }
@@ -95,7 +99,6 @@ public class ElementFragment extends Fragment {
         super.onDestroyView();
         Log.i("TAG_", "ElementFragment_onDestroyView");
     }
-
     @Override
     public void onDestroy() {
         Log.i("TAG_", "ElementFragment_onDestroy");
@@ -112,7 +115,14 @@ public class ElementFragment extends Fragment {
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
     }
-    String left,right;
+    String left = "<font color=\"#FFFF00\">温度:</font><font color=\"#FFFFFF\">--</font><font color=\"#FFFFFF\">℃<br></font>"
+            +"<font color=\"#FFFF00\">风速:</font><font color=\"#FFFFFF\">--</font><font color=\"#FFFFFF\">m/s<br></font>"
+            +"<font color=\"#FFFF00\">雨量:</font><font color=\"#FFFFFF\">--</font><font color=\"#FFFFFF\">mm<br></font>";
+
+    String right = "<font color=\"#FFFF00\">湿度:</font><font color=\"#FFFFFF\">--</font><font color=\"#FFFFFF\">%RH<br></font>"
+            +"<font color=\"#FFFF00\">风向:</font><font color=\"#FFFFFF\">--</font><font color=\"#FFFFFF\"><br></font>"
+            +"<font color=\"#FFFF00\">气压:</font><font color=\"#FFFFFF\">--</font><font color=\"#FFFFFF\">hPa<br></font>";
+
     public void updateText(String leftText, String rightText) {
         Log.i("TAG_", "updateText:" + leftText + ";" + rightText);
         if (!TextUtils.isEmpty(leftText)) {
@@ -134,8 +144,8 @@ public class ElementFragment extends Fragment {
         }
     }
 
-    public void setDefultText(String right, String lift) {
-
+    public void setDefultText() {
+             updateText(left,right);
     }
 
 }

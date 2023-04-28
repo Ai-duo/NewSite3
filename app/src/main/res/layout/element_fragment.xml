@@ -20,7 +20,7 @@
         </data>
 
         <LinearLayout
-            android:background="#000"
+           android:background="#000"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -29,9 +29,9 @@
             >
                 <!-- app:setOrientation="@{orientation}"-->
                 <TextView
-                    android:textColor="#f00"
+
                     android:layout_marginLeft="2px"
-                    android:text="@{leftText}"
+
                     app:setExtraTextSize="@{textSize}"
                     app:setExtraTypeface="@{typeFace}"
                     android:id="@+id/rightText"
@@ -44,10 +44,9 @@
 <!-- android:lineSpacingExtra="10px"-->
                 <TextView
 
-                    android:text="@{rightText}"
+
                     app:setExtraTextSize="@{textSize}"
                     app:setExtraTypeface="@{typeFace}"
-                    android:textColor="#f00"
                     android:id="@+id/leftText"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

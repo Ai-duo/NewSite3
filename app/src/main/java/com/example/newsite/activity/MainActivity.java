@@ -12,6 +12,8 @@ import androidx.lifecycle.ViewModelProviders;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -81,6 +83,7 @@ public class MainActivity extends Activity implements LifecycleOwner {
 
         setAllObserve();
         startService();
+      //  elementFragment.setDefultText();
     }
 
     private void initSizeAndTypeFace() {
@@ -92,7 +95,9 @@ public class MainActivity extends Activity implements LifecycleOwner {
         }
         binding.setTypeFace(fontFace);
         binding.setVariable(BR.textSize,SiteSets.getSiteTextSet().topSize);
-
+        FragmentManager manager  = getFragmentManager();
+        FragmentTransaction fragmentTransaction = manager.beginTransaction();
+        fragmentTransaction.replace(R.id.content_fragment,elementFragment).commitAllowingStateLoss();
     }
 
     private void initDataBinding() {
@@ -109,10 +114,11 @@ public class MainActivity extends Activity implements LifecycleOwner {
     private void inintFragments() {
         elementFragment = new ElementFragment();
         pmFragment = new PMFragment();
-        binding.setELementFragemnt(elementFragment);
+
+       /* binding.setELementFragemnt(elementFragment);
         if(SiteSets.getSiteTextSet().isChange){
             binding.setPmFragment(null);
-        }
+        }*/
 
     }
 
