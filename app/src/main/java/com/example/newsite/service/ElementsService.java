@@ -67,7 +67,7 @@ public class ElementsService extends Service {
         weaTimer();
         bindCardSystemUartAidl();
         startGetUart();
-        final String in = "DMGD WX001 2021-03-17 16:45 1111111111111011111111111111110000000000000000000000000000000000001110000000000000000000000000000001100000000000000000000001000000000000000 00000000000000000080000000000000000 98 53 102 48 100 59 1605 98 54 101 95 1606 0 218 227 1601 218 1645 * 72 69 1601 188 165 10108 10108 1617 10106 1601 10126 0 00 98 71 000000000000000000000000000000000000000000000 *5B *33 T";
+        /*final String in = "DMGD WX001 2021-03-17 16:45 1111111111111011111111111111110000000000000000000000000000000000001110000000000000000000000000000001100000000000000000000001000000000000000 00000000000000000080000000000000000 98 53 102 48 100 59 1605 98 54 101 95 1606 0 218 227 1601 218 1645 * 72 69 1601 188 165 10108 10108 1617 10106 1601 10126 0 00 98 71 000000000000000000000000000000000000000000000 *5B *33 T";
         Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
@@ -75,20 +75,7 @@ public class ElementsService extends Service {
             public void run() {
                 getElements(in);
             }
-        }, 0, 10000);
-      /*  new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(10000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                //restartApp();
-                // reboot();
-                // LiveDataBus.getInstance().getElementsMutableLiveData().postValue(new Elements("金华气象", "2020-11-04 16:35", "12", "23", "23", "56", "56", "54", "124"));
-            }
-        }).start();*/
+        }, 0, 10000);*/
     }
 
     Thread thread;

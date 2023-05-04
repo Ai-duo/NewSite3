@@ -17,8 +17,8 @@ public class UrlList {
     public final static String JINHUA = "58549";
     public final static String SUNCHANG = "58644";
     public final static String TONGXIANG = "58456";
-    //public final static String CANGNAN = "58456";
-    public static String sitenum = CANGNAN;
+    public final static String JIANGSHAN = "58632";
+    public static String sitenum = QINGTIAN;
 
     //天气预报地址
     public static String dayurl = "http://61.153.246.242:8888/qxdata/QxService.svc/getdayybdata/" + sitenum;

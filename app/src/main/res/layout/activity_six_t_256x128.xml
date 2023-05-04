@@ -35,8 +35,8 @@
     <!--洞头-->
     <LinearLayout
         android:id="@+id/maincontainer"
-        android:layout_width="256px"
-        android:layout_height="128px"
+        android:layout_width="320px"
+        android:layout_height="160px"
         android:background="#000"
         android:orientation="vertical"
         android:screenOrientation="portrait"
@@ -81,7 +81,7 @@
             app:marqueeview_repet_type="repet_interval"
             app:marqueeview_text_color="#f00"
             app:marqueeview_text_distance="100"
-            app:marqueeview_text_size="8"
+            app:marqueeview_text_size="13"
             app:marqueeview_text_speed="0.3" />
         <!--<TextView
             android:visibility="gone"
