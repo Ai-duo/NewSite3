@@ -21,5 +21,5 @@ public class UrlList {
     public static String sitenum = QINGTIAN;
 
     //天气预报地址
-    public static String dayurl = "http://61.153.246.242:8888/qxdata/QxService.svc/getdayybdata/" + sitenum;
+    public static String dayurl = "https://61.153.246.242:8888/qxdata/QxService.svc/getdayybdata/" + sitenum;
 }

@@ -67,13 +67,15 @@ public class ElementsService extends Service {
         weaTimer();
         bindCardSystemUartAidl();
         startGetUart();
-        /*final String in = "DMGD WX001 2021-03-17 16:45 1111111111111011111111111111110000000000000000000000000000000000001110000000000000000000000000000001100000000000000000000001000000000000000 00000000000000000080000000000000000 98 53 102 48 100 59 1605 98 54 101 95 1606 0 218 227 1601 218 1645 * 72 69 1601 188 165 10108 10108 1617 10106 1601 10126 0 00 98 71 000000000000000000000000000000000000000000000 *5B *33 T";
-        Timer timer = new Timer();
+        final String in = "DMGD WX001 2021-03-17 16:45 1111111111111011111111111111110000000000000000000000000000000000001110000000000000000000000000000001100000000000000000000001000000000000000 00000000000000000080000000000000000 98 53 102 48 100 59 1605 98 54 101 95 1606 0 218 227 1601 218 1645 * 72 69 1601 188 165 10108 10108 1617 10106 1601 10126 0 00 98 71 000000000000000000000000000000000000000000000 *5B *33 T";
+        getElements(in);
+
+        /* Timer timer = new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                getElements(in);
+
             }
         }, 0, 10000);*/
     }
@@ -233,7 +235,7 @@ public class ElementsService extends Service {
                         JSONObject json = new JSONObject(result);
                         String Info = json.optString("DATE");
                         String dayinfo = json.optString("wea_txt1");
-                        // site_name = json.optString("wea_logo");
+                        Log.i("TAG", "dayinfo:"+dayinfo);
                         if (!TextUtils.isEmpty(Info)) {
                             EventBus.getDefault().post(dayinfo);
                             LiveDataBus.getInstance().setWeaInfo(dayinfo);
@@ -247,11 +249,12 @@ public class ElementsService extends Service {
                         Log.i("TAG", "获取天气数据失败");
                     }
                 } catch (Exception e) {
-                    // Log.i("TAG", "网络异常");
+                    e.printStackTrace();
+                    Log.i("TAG", "网络异常");
                 }
 
             }
-        }, 0, 3000);
+        }, 0, 30000);
     }
 
     String s2 = "";
